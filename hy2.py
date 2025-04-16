@@ -1,0 +1,5 @@
+ID = input("Enter your student ID:")
+name = input("Enter your name:")
+major = input("Enter your major:")
+print ("Student Probile:")
+print (name + "'s student ID is " + ID + "and their major is " + major + ".")
