@@ -25,16 +25,16 @@ B_route = {'거리': 1200, '고도': 30}#수정 필요
 C_route = {'거리': 800, '고도': 90}#수정 필요
 
 def calculate_stamina(route):
-    global stamina
+    global stamina# '스태미나' 변수를 전역으로 사용, 왜쓰는진 모르는데 이거 있어야 실행됨....
     distance = route['거리']
     elevation = route['고도']
-    sigan = (distance / bopoc) * socdo
-    simpe_rate = simpe[simper]
-    strength_rate = strength[strengths]
-    elevation_loss = (elevation * simpe_rate * sigan) / reference_time
-    distance_loss = (distance * weight * strength_rate * sigan) / reference_time
-    total_loss = elevation_loss + distance_loss
-    stamina -= total_loss
+    sigan = (distance / bopoc) * socdo# 이동 시간 계산 (초)
+    simpe_rate = simpe[simper]# 심폐내구력 감소율
+    strength_rate = strength[strengths]# 근력 감소율
+    elevation_loss = (elevation * simpe_rate * sigan) / reference_time# 고도 스태미나 감소
+    distance_loss = (distance * weight * strength_rate * sigan) / reference_time# 거리/배낭 스태미나 감소
+    total_loss = elevation_loss + distance_loss# 총 스태미나 감소
+    stamina -= total_loss# 남은 스태미나 계산
     return stamina
 
 calculate_stamina(A_route)
