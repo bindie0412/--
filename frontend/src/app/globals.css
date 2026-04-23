@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0e0e0e;
+  --color-foreground: #e7e5e5;
+  --color-primary: #d3bcfc;
+  --color-primary-container: #503d73;
+  --color-surface: #0e0e0e;
+  --color-surface-container: #191a1a;
+  --color-surface-container-high: #1f2020;
+  --color-surface-container-highest: #252626;
+  --color-surface-bright: #2b2c2c;
+  --color-on-surface-variant: #acabaa;
+}
+
+:root {
+  --background: #0e0e0e;
+  --foreground: #e7e5e5;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Manrope', sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-none;
+  }
+}
+
+/* Custom Scrollbar for Tasks */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #252626;
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2b2c2c;
+}
